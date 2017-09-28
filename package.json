@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/briandamaged/node-cache-register-redis/issues"
   },
-  "homepage": "https://github.com/briandamaged/node-cache-register-redis#readme"
+  "homepage": "https://github.com/briandamaged/node-cache-register-redis#readme",
+  "peerDependencies": {
+    "cache-register": "^0.8.0",
+    "redis": "^2.8.0"
+  }
 }
