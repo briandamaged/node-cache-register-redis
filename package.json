@@ -1,6 +1,6 @@
 {
   "name": "cache-register-redis",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Redis storage for cache-register",
   "main": "src/index.js",
   "scripts": {
