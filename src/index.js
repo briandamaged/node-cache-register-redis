@@ -1,5 +1,6 @@
 
 const cr = require('cache-register');
+const _ = require('lodash');
 const {BaseStorage} = cr.storage;
 
 class RedisStorage extends BaseStorage {
@@ -34,6 +35,8 @@ class RedisStorage extends BaseStorage {
       const args = [key, JSON.stringify(d)];
       if(typeof(this.ttl) === 'number') {
         args.push("PX", this.ttl);
+      } else if(_.isFunction(this.ttl)) {
+        args.push("PX", this.ttl());
       }
 
       this.redis.set(...args, function(err, data) {
